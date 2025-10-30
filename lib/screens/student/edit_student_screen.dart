@@ -155,7 +155,7 @@ class _EditStudentScreenState extends State<EditStudentScreen> {
 Future<int> updateStudent(Student student) async {
   final response = await http.put(
     Uri.parse(
-      '${ConfigAPI.baseUrl}?url_student_code=${student.studentCode}',
+      '${ConfigAPI.baseUrl}/student.php?url_student_code=${student.studentCode}',
     ),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
