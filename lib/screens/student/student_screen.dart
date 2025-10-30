@@ -271,7 +271,7 @@ List<Student> parsestudents(String responseBody) {
 Future<int> deleteStudent(Student student) async {
   final response = await http.delete(
     Uri.parse(
-      '${ConfigAPI.baseUrl}?student_code=${student.studentCode}',
+      '${ConfigAPI.baseUrl}/student.php?student_code=${student.studentCode}',
     ),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
